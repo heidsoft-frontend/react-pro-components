@@ -1,22 +1,16 @@
 import {
   CaretDownFilled,
   DoubleRightOutlined,
-  GithubFilled,
-  InfoCircleFilled,
-  PlusCircleFilled,
-  QuestionCircleFilled,
-  SearchOutlined,
 } from '@ant-design/icons';
 import type { ProSettings } from '@ant-design/pro-components';
 import {
   PageContainer,
-  ProCard,
   ProConfigProvider,
   ProLayout,
   SettingDrawer,
 } from '@ant-design/pro-components';
 import { css } from '@emotion/css';
-import { Button, Divider, Input, Popover, theme } from 'antd';
+import { Button, Divider, Popover, theme } from 'antd';
 import React, { useState } from 'react';
 import defaultProps from './_defaultProps';
 
@@ -194,6 +188,7 @@ function App() {
           // }}
           headerTitleRender={(logo, title, _) => {
             const defaultDom = (
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a>
                 {logo}
                 {title}
@@ -206,7 +201,7 @@ function App() {
             return (
               <>
                 {defaultDom}
-                {/* <MenuCard /> */}
+                <MenuCard />
               </>
             );
           }}
@@ -261,14 +256,6 @@ function App() {
               // </Button>,
             ]}
           >
-            <ProCard
-              style={{
-                height: '200vh',
-                minHeight: 800,
-              }}
-            >
-              <div />
-            </ProCard>
           </PageContainer>
 
           <SettingDrawer

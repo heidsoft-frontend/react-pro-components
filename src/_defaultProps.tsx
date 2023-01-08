@@ -1,15 +1,9 @@
+/* eslint-disable import/no-anonymous-default-export */
 import {CrownFilled, TabletFilled } from '@ant-design/icons';
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   route: {
     path: '/',
     routes: [
-    //   {
-    //     path: '/welcome',
-    //     name: '欢迎',
-    //     icon: <SmileFilled />,
-    //     component: './Welcome',
-    //   },
       {
         path: '/admin',
         name: '管理页',
@@ -20,7 +14,7 @@ export default {
           {
             path: '/admin/sub-page1',
             name: '一级页面',
-            icon: 'https://gw.alipayobjects.com/zos/antfincdn/upvrAjAPQX/Logo_Tech%252520UI.svg',
+            icon: <CrownFilled/>,
             component: './Welcome',
           },
           {
@@ -81,18 +75,10 @@ export default {
             component: './Welcome',
           },
         ],
-      },
-    //   {
-    //     path: 'https://ant.design',
-    //     name: 'Ant Design 官网外链',
-    //     icon: <ChromeFilled />,
-    //   },
+      }
     ],
   },
   location: {
     pathname: '/',
-  },
-  appList: [
-   
-  ],
+  }
 };
